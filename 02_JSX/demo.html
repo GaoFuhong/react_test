@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02_JSX_demo</title>
+</head>
+<body>
+    <h1>JS前端框架列表</h1>
+    <div id="example1"></div>
+    <script type="text/javascript" src="../js/react.development.js"></script>
+    <script type="text/javascript" src="../js/react-dom.development.js"></script>
+    <script type="text/javascript" src="../js/babel.min.js"></script>
+    <script type="text/babel">
+        const jsNames = ['jQuery', 'zepto', 'angular', 'react', 'vue']
+        const ul = (<ul>{
+            jsNames.map((jsName, index) => <li key={index}>{jsName}</li>)
+        }</ul>)
+        debugger
+        ReactDOM.render(ul, document.getElementById('example1'))
+    </script>
+</body>
+</html>
